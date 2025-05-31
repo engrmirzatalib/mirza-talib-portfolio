@@ -1,5 +1,5 @@
 /* Google Font */
-@import url('https://https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* Base Font - Handled by Tailwind on body, but good to keep if needed for elements without Tailwind font classes */
 body {
