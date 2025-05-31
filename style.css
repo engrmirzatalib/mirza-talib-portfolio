@@ -105,3 +105,7 @@ body {
     }
     /* Removed the empty #certificates li {} block from here, as it was causing a linter warning. */
 }
+/* Dark Mode Fix for Sections */
+html.dark section {
+    background-color: #1f2937 !important; /* Tailwind ka gray-800 color */
+}
