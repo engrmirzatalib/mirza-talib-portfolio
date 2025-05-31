@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Mirza Talib - Software Engineer | Web Developer | Embedded Systems</title>
+    <meta name="description" content="Mirza Talib is a passionate Software Engineer and Web Developer showcasing expertise in Node.js, HTML, CSS, JavaScript, and embedded systems. View my portfolio, projects, and resume.">
+    <meta name="keywords" content="Mirza Talib, Software Engineer, Web Developer, Embedded Systems, Node.js, HTML, CSS, JavaScript, Portfolio, Resume, Robotics, Data Visualization">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="assets/css/style.css" />
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
+
+    <button id="theme-toggle" type="button" class="fixed top-6 right-6 z-50 p-3 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-lg hover:shadow-xl transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <svg id="sun-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 00-1.414-1.414L13.536 4.464a1 1 0 101.414 1.414l.707-.707zM10 15a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4 0a1 1 0 00-1.414.707l-.707.707a1 1 0 001.414 1.414l.707-.707A1 1 0 006 15zm-2.121-9.393a1 1 0 001.414-1.414l-.707-.707A1 1 0 003.535 4.464l.707.707z" />
+        </svg>
+        <svg id="moon-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8 0 1010.586 10.586z" />
+        </svg>
+    </button>
+
+    <header class="bg-blue-800 text-white p-6 text-center shadow-md dark:bg-blue-950 transition-colors duration-300">
+        <h1 class="text-4xl font-bold mb-2 transform hover:scale-105 transition-transform duration-300 dark:text-blue-200">
+            Hello, I'm Mirza Talib 👨‍💻
+        </h1>
+        
+        <div class="mt-6 mb-4">
+            <img src="assets/profile-pic.jpg" alt="Mirza Talib's Profile Picture" class="w-32 h-32 rounded-full mx-auto border-4 border-white shadow-lg object-cover">
+            
+            <p class="text-lg mt-4 dark:text-gray-300">Welcome to my portfolio website!</p>
+            
+            <a href="#projects" class="inline-block bg-white text-blue-800 font-semibold py-3 px-8 rounded-full mt-6 shadow-lg hover:bg-gray-200 hover:scale-105 transition-all duration-300 dark:bg-blue-600 dark:text-white dark:hover:bg-blue-700">
+                View My Work
+            </a>
+        </div>
+
+        <nav class="mt-4 relative">
+            <button id="menu-button" class="md:hidden block absolute top-1/2 left-4 -translate-y-1/2 p-2 focus:outline-none focus:ring-2 focus:ring-white rounded dark:focus:ring-blue-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <ul id="nav-links" class="flex flex-wrap justify-center space-x-4 md:space-x-6 text-lg md:flex">
+                <li><a href="#about" class="hover:text-blue-200 transition-colors duration-300 dark:hover:text-blue-400">About Me</a></li>
+                <li><a href="#skills" class="hover:text-blue-200 transition-colors duration-300 dark:hover:text-blue-400">Skills</a></li>
+                <li><a href="#projects" class="hover:text-blue-200 transition-colors duration-300 dark:hover:text-blue-400">Projects</a></li>
+                <li><a href="#certificates" class="hover:text-blue-200 transition-colors duration-300 dark:hover:text-blue-400">Certificates</a></li>
+                <li><a href="#contact" class="hover:text-blue-200 transition-colors duration-300 dark:hover:text-blue-400">Contact</a></li>
+                <li><a href="assets/MIRZA TALIB --- RESUME.pdf" download class="hover:text-blue-200 transition-colors duration-300 dark:hover:text-blue-400">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="container mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:shadow-xl dark:shadow-gray-700/50 transition-colors duration-300" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-blue-700 border-b-2 border-gray-300 pb-2 mb-4 dark:text-blue-400 dark:border-gray-600">About Me</h2>
+        <p class="text-justify leading-relaxed dark:text-gray-300">
+            I am a passionate and dedicated aspiring Software Engineer from JECRC Foundation, Jaipur, with a B.Tech in Electronics and Communication. I am actively seeking challenging opportunities where I can fully utilize my technical skills in areas like web development (Node.js, HTML, CSS, JavaScript) and embedded systems to contribute effectively to an organization's success. My goal is to secure a responsible position in a reputable company that allows me to continuously expand my knowledge, skills, and experience through practical, real-world applications. I am committed to contributing to the company’s growth while simultaneously enhancing my own career prospects by thriving in a dynamic and collaborative work environment.
+        </p>
+    </section>
+
+    <section id="skills" class="container mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:shadow-xl dark:shadow-gray-700/50 transition-colors duration-300" data-aos="fade-right">
+        <h2 class="text-3xl font-semibold text-blue-700 border-b-2 border-gray-300 pb-2 mb-4 dark:text-blue-400 dark:border-gray-600">Skills</h2>
+        <ul class="list-disc list-inside space-y-2 text-lg dark:text-gray-300">
+            <li><strong>Programming Languages:</strong> C / C++, Python, JavaScript</li>
+            <li><strong>Web Development:</strong> Full Stack Web Development, HTML, CSS, JavaScript, Node.js (Backend), RESTful APIs</li>
+            <li><strong>Databases:</strong> SQL, Introduction to NoSQL databases</li>
+            <li><strong>Core Concepts:</b> Data Structures, Algorithms</li>
+            <li><strong>Embedded Systems & Robotics:</strong> Basic Embedded System, Robotics, Microcontroller Programming, Sensor Interfacing</li>
+            <li><strong>Electronics Core Subjects:</strong> Digital Electronics, Electronic Devices</li>
+            <li><strong>Tools & Platforms:</strong> Git, VS Code, Arduino, HackerRank, Infosys Springboard, Forage</li>
+            <li><strong>Soft Skills:</strong> Hardworking, Adaptable, Detail-Oriented, Problem-Solver, Collaborative</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="container mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:shadow-xl dark:shadow-gray-700/50 transition-colors duration-300" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-blue-700 border-b-2 border-gray-300 pb-2 mb-4 dark:text-blue-400 dark:border-gray-600">Projects</h2>
+        <div class="space-y-8">
+            <div data-aos="zoom-in">
+                <h3 class="text-2xl font-bold text-blue-800 mb-2 dark:text-blue-300">🤖 Robotic Arm</h3>
+                <p class="text-justify leading-relaxed mb-2 dark:text-gray-300">
+                    This project showcases my expertise in **Embedded Systems and Robotics**. I designed and programmed a robotic arm utilizing **Arduino, Stepper Motors, and various Sensors**. Key technical aspects included precise **Motor Control** and implementing complex **Inverse Kinematics** for motion planning.
+                </p>
+                <p class="text-justify leading-relaxed dark:text-gray-300">
+                    This involved hands-on experience in integrating hardware and software components, ensuring real-time control and high precision. It demonstrates my capability in building efficient, reliable automation systems and implementing advanced algorithms for robotic manipulation.
+                </p>
+                <div class="mt-3">
+                    <a href="https://github.com/engrmirzatalib" target="_blank" class="text-blue-600 hover:underline font-semibold dark:text-blue-400 dark:hover:text-blue-200">View on GitHub (Coming Soon!)</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in">
+                <h3 class="text-2xl font-bold text-blue-800 mb-2 dark:text-blue-300">📄 Form Builder Web App</h3>
+                <p class="text-justify leading-relaxed dark:text-gray-300">
+                    Developed a dynamic web-based application using **HTML, CSS, and PHP**, which securely integrated with a **database server** to store user details. The application features robust **data validation and error handling** mechanisms to enhance user experience and ensure data integrity.
+                </p>
+                <p class="text-justify leading-relaxed dark:text-gray-300">
+                    Designed a responsive and intuitive User Interface (UI) that simplifies the data entry process, making the application accessible and user-friendly across various devices. This project highlights my skills in full-stack web development and database management.
+                </p>
+                <div class="mt-3">
+                    <a href="https://github.com/engrmirzatalib" target="_blank" class="text-blue-600 hover:underline font-semibold dark:text-blue-400 dark:hover:text-blue-200">View on GitHub (Coming Soon!)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="container mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:shadow-xl dark:shadow-gray-700/50 transition-colors duration-300" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-blue-700 border-b-2 border-gray-300 pb-2 mb-4 dark:text-blue-400 dark:border-gray-600">Certificates</h2>
+        <ul class="space-y-4">
+            <li class="bg-gray-50 p-4 rounded-md border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer dark:bg-gray-700 dark:border-blue-600 dark:shadow-md dark:shadow-gray-700/30 dark:hover:shadow-lg dark:hover:shadow-blue-500/30" onclick="toggleDescription(this)" data-aos="fade-right">
+                <h3 class="text-xl font-semibold text-gray-900 mb-1 dark:text-gray-200">🏅 Backend Internship Certificate – Learn and Build</h3>
+                <div class="certificate-description dark:text-gray-400">
+                    <p>This prestigious certificate signifies the successful completion of an intensive 45-day Online Summer Internship Program in **Backend Web Development**, with a primary focus on the **Node.js domain**. Conducted by Learn and Build (LnB) from May 6, 2024, this program offered an immersive, hands-on learning experience that deeply explored modern backend architectural patterns. My participation involved gaining practical expertise in leveraging **Node.js** for building highly performant and scalable server-side applications, emphasizing its asynchronous and event-driven capabilities. Key areas of study and application included the meticulous design and implementation of robust **RESTful APIs** to facilitate seamless communication between server and client, efficient **database management utilizing SQL** for data persistence and retrieval, and the development of complex business logic. This rigorous training also encompassed crucial aspects like ensuring data security, optimizing application performance, and preparing solutions for real-world deployment. This internship has profoundly strengthened my practical skills in cutting-edge backend technologies, equipping me with the comprehensive knowledge and capability to contribute effectively to sophisticated web development projects.</p>
+                </div>
+                <a href="certificates/Backend Internship Certificate.pdf" target="_blank" class="block mt-2 text-blue-600 hover:underline text-right dark:text-blue-400 dark:hover:text-blue-200">View Certificate</a>
+            </li>
+
+            <li class="bg-gray-50 p-4 rounded-md border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer dark:bg-gray-700 dark:border-blue-600 dark:shadow-md dark:shadow-gray-700/30 dark:hover:shadow-lg dark:hover:shadow-blue-500/30" onclick="toggleDescription(this)" data-aos="fade-left">
+                <h3 class="text-xl font-semibold text-gray-900 mb-1 dark:text-gray-200">🏆 Backend Program Certificate – Learn and Build</h3>
+                <div class="certificate-description dark:text-gray-400">
+                    <p>This certificate proudly attests to the successful completion of the **45-Day Online Summer Program 2024** in **Backend Web Development**, with a specialized emphasis on the **Node.js domain**. Conducted by Learn and Build (LnB) from May 6, 2024, this program provided an extensive curriculum designed to build robust server-side applications. Through this intensive program, I gained profound practical knowledge and hands-on experience in leveraging Node.js's asynchronous capabilities for high-performance backend solutions, designing and implementing effective **RESTful APIs**, and mastering **SQL database management** for efficient data handling. The program further solidified my understanding of crucial backend concepts including server architecture, data security, and application deployment strategies. This comprehensive training has significantly enhanced my technical expertise, making me proficient in developing scalable and sophisticated backend systems.</p>
+                </div>
+                <a href="certificates/Backend Program Certificate.pdf" target="_blank" class="block mt-2 text-blue-600 hover:underline text-right dark:text-blue-400 dark:hover:text-blue-200">View Certificate</a>
+            </li>
+
+            <li class="bg-gray-50 p-4 rounded-md border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer dark:bg-gray-700 dark:border-blue-600 dark:shadow-md dark:shadow-gray-700/30 dark:hover:shadow-lg dark:hover:shadow-blue-500/30" onclick="toggleDescription(this)" data-aos="fade-right">
+                <h3 class="text-xl font-semibold text-gray-900 mb-1 dark:text-gray-200">🎖️ Data Visualisation Certificate – Forage</h3>
+                <div class="certificate-description dark:text-gray-400">
+                    <p>This certificate acknowledges the successful completion of the "Data Visualisation: Empowering Business with Effective Insights" virtual experience program from Forage, completed on May 26, 2025. Over the period of May 2025, I gained comprehensive practical skills essential for effective data visualization and business insight communication. The program encompassed key modules including framing complex business scenarios, selecting the most appropriate visual representations for data, creating effective and impactful visuals, and proficiently communicating insights and analysis to stakeholders. This training has significantly enhanced my ability to transform raw data into actionable business intelligence through compelling visual narratives, thereby improving data-driven decision-making.</p>
+                </div>
+                <a href="certificates/Data Visualisation Certificate.pdf" target="_blank" class="block mt-2 text-blue-600 hover:underline text-right dark:text-blue-400 dark:hover:text-blue-200">View Certificate</a>
+            </li>
+
+            <li class="bg-gray-50 p-4 rounded-md border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer dark:bg-gray-700 dark:border-blue-600 dark:shadow-md dark:shadow-gray-700/30 dark:hover:shadow-lg dark:hover:shadow-blue-500/30" onclick="toggleDescription(this)" data-aos="fade-left">
+                <h3 class="text-xl font-semibold text-gray-900 mb-1 dark:text-gray-200">📜 Embedded System & Robotics – Upflairs</h3>
+                <div class="certificate-description dark:text-gray-400">
+                    <p>This Certificate of Achievement is proudly presented to Mirza Talib from the Department of Electronics and Communication, JECRC Foundation, Jaipur, for successfully completing a 20-day Industrial Training Program in **Embedded Systems and Robotics**. Conducted by UPFLAIRS Pvt. Ltd. from July 15th to August 5th, 2022, this program provided intensive practical training in core concepts and applications within embedded systems and robotics. The curriculum focused on hands-on development and understanding of hardware-software integration, microcontroller programming, sensor interfacing, and robotic control mechanisms. This training significantly enhanced my technical proficiency in designing, developing, and implementing solutions in the rapidly evolving fields of embedded systems and robotics.</p>
+                </div>
+                <a href="certificates/Embedded System Certificate.pdf" target="_blank" class="block mt-2 text-blue-600 hover:underline text-right dark:text-blue-400 dark:hover:text-blue-200">View Certificate</a>
+            </li>
+
+            <li class="bg-gray-50 p-4 rounded-md border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer dark:bg-gray-700 dark:border-blue-600 dark:shadow-md dark:shadow-gray-700/30 dark:hover:shadow-lg dark:hover:shadow-blue-500/30" onclick="toggleDescription(this)" data-aos="fade-right">
+                <h3 class="text-xl font-semibold text-gray-900 mb-1 dark:text-gray-200">🖥️ Hackerrank Certificate – Python (Basic)</h3>
+                <div class="certificate-description dark:text-gray-400">
+                    <p>This certificate from HackerRank attests to the successful completion of the assessment for **Python (Basic)** skills, cleared by Mirza Talib on July 12, 2024. This achievement validates foundational proficiency in Python programming, including core syntax, data structures, control flow, and problem-solving. It demonstrates a solid understanding of basic Python concepts, essential for further progression in software development and data-related fields.</p>
+                </div>
+                <a href="certificates/Hackerrank Certificate.pdf" target="_blank" class="block mt-2 text-blue-600 hover:underline text-right dark:text-blue-400 dark:hover:text-blue-200">View Certificate</a>
+            </li>
+
+            <li class="bg-gray-50 p-4 rounded-md border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer dark:bg-gray-700 dark:border-blue-600 dark:shadow-md dark:shadow-gray-700/30 dark:hover:shadow-lg dark:hover:shadow-blue-500/30" onclick="toggleDescription(this)" data-aos="fade-left">
+                <h3 class="text-xl font-semibold text-gray-900 mb-1 dark:text-gray-200">🔧 Infosys Certificate – NoSQL Databases</h3>
+                <div class="certificate-description dark:text-gray-400">
+                    <p>This course completion certificate from Infosys Springboard attests to the successful completion of the course "Introduction to NoSQL databases" by Mirza Talib on August 16, 2024. This program provided comprehensive insights into the principles and practical applications of NoSQL databases, including their various types (e.g., Document, Key-Value, Column-Family, Graph), use cases, and advantages over traditional relational databases. The course enhanced my understanding of flexible schema design, horizontal scalability, and efficient data management for large-scale, unstructured, and semi-structured datasets, crucial skills for modern data architectures.</p>
+                </div>
+                <a href="certificates/Infosys Certificate.pdf" target="_blank" class="block mt-2 text-blue-600 hover:underline text-right dark:text-blue-400 dark:hover:text-blue-200">View Certificate</a>
+            </li>
+
+            <li class="bg-gray-50 p-4 rounded-md border-l-4 border-blue-500 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer dark:bg-gray-700 dark:border-blue-600 dark:shadow-md dark:shadow-gray-700/30 dark:hover:shadow-lg dark:hover:shadow-blue-500/30" onclick="toggleDescription(this)" data-aos="fade-right">
+                <h3 class="text-xl font-semibold text-gray-900 mb-1 dark:text-gray-200">🧠 Web Development Certificate – Matrix Computers</h3>
+                <div class="certificate-description dark:text-gray-400">
+                    <p>This Certificate of Achievement from Matrix Computers confirms the successful completion of a comprehensive training/internship program in **Full Stack Web Development**. Completed from July 20, 2023, to September 3, 2023, at their Jaipur Centre, this program provided in-depth knowledge and hands-on experience across both front-end and back-end web technologies. My learning encompassed designing responsive user interfaces, developing robust server-side logic, integrating databases, and deploying complete web applications. This training has equipped me with a holistic understanding of the web development lifecycle and proficiency in building dynamic and interactive web solutions.</p>
+                </div>
+                <a href="certificates/Web development Certificate.pdf" target="_blank" class="block mt-2 text-blue-600 hover:underline text-right dark:text-blue-400 dark:hover:text-blue-200">View Certificate</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact" class="container mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:shadow-xl dark:shadow-gray-700/50 transition-colors duration-300" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-blue-700 border-b-2 border-gray-300 pb-2 mb-4 dark:text-blue-400 dark:border-gray-600">Contact Me</h2>
+        <div class="flex flex-wrap gap-4 text-lg dark:text-gray-300">
+            <p>Email: <a href="mailto:talibmirza5267@gmail.com" class="text-blue-600 hover:underline dark:text-blue-400 dark:hover:text-blue-200">talibmirza5267@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/mirzatalib" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline dark:text-blue-400 dark:hover:text-blue-200">linkedin.com/in/mirzatalib</a></p>
+            <p>GitHub: <a href="https://github.com/engrmirzatalib" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline dark:text-blue-400 dark:hover:text-blue-200">github.com/engrmirzatalib</a></p>
+            <p>Phone: <a href="tel:+917878520067" class="text-blue-600 hover:underline dark:text-blue-400 dark:hover:text-blue-200">+91 7878520067</a></p>
+            <p>Download my resume: <a href="assets/MIRZA TALIB --- RESUME.pdf" download class="text-blue-600 hover:underline font-semibold dark:text-blue-400 dark:hover:text-blue-200">Click here</a></p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white p-4 text-center mt-8 shadow-inner dark:bg-gray-950 transition-colors duration-300">
+        <p>&copy; 2025 Engineer Mirza Talib. All rights reserved.</p>
+    </footer>
+
+    <button id="backToTop" title="Go to top" class="fixed bottom-6 right-6 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors duration-300 hidden dark:bg-gray-700 dark:hover:bg-gray-600">
+        ↑
+    </button>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // AOS initialization
+        AOS.init();
+
+        // Dark Mode Toggle Logic (New Code)
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement; // This is the <html> tag
+
+        // Function to set theme
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                htmlElement.classList.add('dark');
+                document.getElementById('moon-icon').classList.remove('hidden');
+                document.getElementById('sun-icon').classList.add('hidden');
+            } else {
+                htmlElement.classList.remove('dark');
+                document.getElementById('sun-icon').classList.remove('hidden');
+                document.getElementById('moon-icon').classList.add('hidden');
+            }
+            localStorage.setItem('theme', theme); // Save preference
+        }
+
+        // Check for saved theme on page load or system preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // If no saved theme, check system preference
+            setTheme('dark');
+        } else {
+            setTheme('light'); // Default to light if no preference
+        }
+
+        // Toggle button event listener
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                setTheme('light');
+            } else {
+                setTheme('dark');
+            }
+        });
+
+        // Certificate description toggle logic
+        function toggleDescription(element) {
+            const descriptionDiv = element.querySelector('.certificate-description');
+            const viewLink = element.querySelector('a[target="_blank"]'); 
+
+            if (event.target === viewLink) {
+                return;
+            }
+
+            if (descriptionDiv) {
+                descriptionDiv.classList.toggle('active');
+            }
+        }
+
+        // Back to Top Button JavaScript Logic
+        const backToTopButton = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        backToTopButton.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        // Navigation Bar JavaScript Logic
+        const menuButton = document.getElementById('menu-button');
+        const navLinks = document.getElementById('nav-links');
+
+        // Initially hide nav links on small screens
+        if (window.innerWidth < 768) { // 768px is Tailwind's 'md' breakpoint
+            navLinks.classList.add('hidden');
+        }
+
+        menuButton.addEventListener('click', () => {
+            if (navLinks.classList.contains('hidden')) {
+                navLinks.classList.remove('hidden');
+                // These classes will make the mobile menu display vertically and center aligned
+                navLinks.classList.add('flex', 'flex-col', 'items-center', 'w-full', 'bg-blue-700', 'py-4', 'space-y-4', 'dark:bg-blue-900'); 
+            } else {
+                navLinks.classList.add('hidden');
+                navLinks.classList.remove('flex', 'flex-col', 'items-center', 'w-full', 'bg-blue-700', 'py-4', 'space-y-4', 'dark:bg-blue-900');
+            }
+        });
+
+        // Close menu when a nav link is clicked (for smooth scrolling to section)
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) {
+                    navLinks.classList.add('hidden');
+                    navLinks.classList.remove('flex', 'flex-col', 'items-center', 'w-full', 'bg-blue-700', 'py-4', 'space-y-4', 'dark:bg-blue-900');
+                }
+            });
+        });
+
+        // Adjust nav links display on window resize (e.g., rotating phone)
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                navLinks.classList.remove('hidden', 'flex-col', 'items-center', 'w-full', 'bg-blue-700', 'py-4', 'space-y-4', 'dark:bg-blue-900');
+                navLinks.classList.add('flex'); // Ensure it's flex for desktop layout
+            } else {
+                // If resizing down to mobile, hide it again if it was open on desktop
+                navLinks.classList.add('hidden');
+                navLinks.classList.remove('flex', 'flex-col', 'items-center', 'w-full', 'bg-blue-700', 'py-4', 'space-y-4', 'dark:bg-blue-900');
+            }
+        });
+    </script>
+</body>
+</html>

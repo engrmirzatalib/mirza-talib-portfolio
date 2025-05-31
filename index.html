@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Mirza Talib's Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            
+            /* --- Naya Animated Background Gradient Code --- */
+            background: linear-gradient(45deg, #e0f2f7, #c7e9ed, #e0f2f7); /* Light, cool gradient */
+            background-size: 400% 400%; /* Make gradient larger to allow movement */
+            animation: gradientAnimation 15s ease infinite alternate; /* Slow, smooth, repeating animation */
+            /* --- End New Code --- */
+
+            color: #333; /* Dark text */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden; /* Prevent scrollbars during animation */
+            transition: background-color 0.5s ease; /* Smooth transition for dark mode, but background is now animated */
+        }
+
+        /* Dark mode styling for splash screen */
+        body.dark-mode {
+            background: linear-gradient(45deg, #1a202c, #2b3a4a, #1a202c); /* Darker gradient for dark mode */
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite alternate;
+            color: #e2e8f0; /* Tailwind dark mode text */
+        }
+
+        .splash-container {
+            text-align: center;
+        }
+
+        .splash-text {
+            font-size: 3.5rem; /* Slightly larger */
+            font-weight: bold;
+            color: #2563eb; /* Blue color from your portfolio */
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2); /* Stronger shadow */
+            display: flex; /* Make it a flex container to align letters */
+            justify-content: center;
+            gap: 5px; /* Space between letters */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .splash-text span {
+            display: inline-block; /* Each letter can be animated */
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Start slightly below */
+            animation: letterReveal 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards; /* Springy animation */
+        }
+
+        /* Stagger animation for each letter of "Welcome!" */
+        .splash-text span:nth-child(1) { animation-delay: 0.1s; }
+        .splash-text span:nth-child(2) { animation-delay: 0.2s; }
+        .splash-text span:nth-child(3) { animation-delay: 0.3s; }
+        .splash-text span:nth-child(4) { animation-delay: 0.4s; }
+        .splash-text span:nth-child(5) { animation-delay: 0.5s; }
+        .splash-text span:nth-child(6) { animation-delay: 0.6s; }
+        .splash-text span:nth-child(7) { animation-delay: 0.7s; }
+        .splash-text span:nth-child(8) { animation-delay: 0.8s; } /* For '!' */
+
+
+        /* Styles for the subtext container */
+        .splash-subtext {
+            font-size: 1.3rem; /* Slightly larger */
+            margin-top: 20px; /* More space */
+            color: #4a5568;
+            display: flex; /* For inline-block animated parts */
+            justify-content: center;
+            flex-wrap: wrap; /* Allow wrapping */
+        }
+
+        /* Common animation for parts of the subtext */
+        .splash-subtext .part,
+        .splash-subtext .animated-name span {
+            opacity: 0;
+            transform: translateY(10px); /* Smaller lift */
+            animation: subtextFadeIn 0.5s ease-out forwards;
+            display: inline-block; /* Ensure spans behave correctly */
+        }
+
+        /* Name specific styling */
+        .splash-subtext .animated-name {
+            color: #ef4444; /* A slightly different color for the name, like red from Tailwind */
+            font-weight: bold;
+            font-size: 1.4rem; /* Slightly larger than surrounding text */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            display: inline-flex; /* Ensure flex for inner spans */
+            gap: 2px;
+        }
+
+        /* Stagger animation for each letter of "Mirza Talib" */
+        .animated-name span:nth-child(1) { animation-delay: 1.6s; } /* Start after Welcome! */
+        .animated-name span:nth-child(2) { animation-delay: 1.7s; }
+        .animated-name span:nth-child(3) { animation-delay: 1.8s; }
+        .animated-name span:nth-child(4) { animation-delay: 1.9s; }
+        .animated-name span:nth-child(5) { animation-delay: 2.0s; } /* Mirza */
+        .animated-name span:nth-child(6) { animation-delay: 2.1s; } /* space */
+        .animated-name span:nth-child(7) { animation-delay: 2.2s; }
+        .animated-name span:nth-child(8) { animation-delay: 2.3s; }
+        .animated-name span:nth-child(9) { animation-delay: 2.4s; }
+        .animated-name span:nth-child(10) { animation-delay: 2.5s; }
+        .animated-name span:nth-child(11) { animation-delay: 2.6s; } /* Talib */
+
+        /* Animation for "Loading " and "'s Portfolio..." */
+        .splash-subtext .part:nth-child(1) { animation-delay: 1.2s; } /* "Loading " */
+        .splash-subtext .part:nth-child(2) { animation-delay: 2.7s; } /* "'s Portfolio..." */
+
+        /* Dark mode specific text color */
+        body.dark-mode .splash-text {
+            color: #93c5fd; /* Lighter blue for dark mode */
+        }
+        body.dark-mode .splash-subtext {
+            color: #a0aec0;
+        }
+        body.dark-mode .splash-subtext .animated-name {
+            color: #fca5a5; /* Lighter red for dark mode */
+        }
+
+        /* Keyframe for the new background gradient animation */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Existing keyframe animations */
+        @keyframes letterReveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes subtextFadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-container">
+        <h1 class="splash-text">
+            <span>W</span>
+            <span>e</span>
+            <span>l</span>
+            <span>c</span>
+            <span>o</span>
+            <span>m</span>
+            <span>e</span>
+            <span>!</span>
+        </h1>
+        <p class="splash-subtext">
+            <span class="part">Loading </span>
+            <span class="animated-name">
+                <span>M</span><span>i</span><span>r</span><span>z</span><span>a</span><span> </span>
+                <span>T</span><span>a</span><span>l</span><span>i</span><span>b</span>
+            </span>
+            <span class="part">'s Portfolio...</span>
+        </p>
+    </div>
+
+    <script>
+        // Check for saved theme preference from localStorage (from your main site's dark mode logic)
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Set a timer to redirect to the main portfolio page
+        const redirectDelay = 5500; // Increased to 5.5 seconds to appreciate background animation
+
+        setTimeout(() => {
+            const splashContainer = document.querySelector('.splash-container');
+            // Add fade out animation before redirecting
+            splashContainer.style.animation = 'fadeOut 1s ease-in-out forwards';
+
+            // Wait for fade out animation to complete, then redirect
+            setTimeout(() => {
+                // IMPORTANT: Yahan par 'index.html' hi likha hai, kyunki aapki main file ka naam yahi hai
+                window.location.href = 'portfolio.html'; 
+            }, 900); // 900ms to allow fadeOut animation to play
+            
+        }, redirectDelay);
+    </script>
+</body>
+</html>

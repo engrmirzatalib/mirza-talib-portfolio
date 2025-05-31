@@ -1,0 +1,107 @@
+/* Google Font */
+@import url('https://https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Base Font - Handled by Tailwind on body, but good to keep if needed for elements without Tailwind font classes */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Back to Top Button - Custom Positioning and Styles */
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #333;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    display: none; /* Initially hidden, controlled by JS */
+    z-index: 999;
+}
+
+#backToTop:hover {
+    background-color: #555;
+}
+
+/* Certificates Section - Custom Layout and Toggle Styles */
+#certificates ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 0; /* Override default ul padding */
+    margin: 0; /* Override default ul margin */
+}
+
+#certificates li {
+    list-style: none; /* Remove default list bullet */
+    /* background-color, padding, border-left, border-radius, box-shadow, transition are largely handled by Tailwind classes in index.html for these list items, but keeping these specific overrides for flex layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px; 
+    overflow: hidden; /* Important for smooth height transition */
+    position: relative; 
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+/* Certificate Description Toggle Logic */
+.certificate-description {
+    width: 100%;
+    max-height: 0; 
+    overflow: hidden;
+    opacity: 0; 
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, padding 0.5s ease-out;
+
+    font-size: 0.9em; /* Smaller font for description */
+    color: #555;
+    line-height: 1.5;
+    text-align: justify; 
+}
+
+.certificate-description.active {
+    max-height: 1000px; /* Large enough to show all content */
+    opacity: 1; 
+    padding-top: 10px; 
+    padding-bottom: 5px;
+}
+
+/* Certificates View Certificate Link Styling - Adjust if needed after Tailwind */
+#certificates a {
+    /* Most styles for this link are in index.html (text-blue-600, hover:underline) */
+    /* These specific overrides ensure button-like appearance */
+    background-color: #007bff; /* Might be overridden by text-blue-600 in HTML, but good to ensure */
+    color: #fff; /* Semicolon added here */
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    width: 100%; 
+    text-align: center; 
+    margin-top: 5px; 
+}
+
+#certificates a:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Specific Overrides (mostly for #backToTop, and certificate list item layout adjustments) */
+@media (max-width: 600px) {
+    /* These are largely handled by Tailwind's mobile-first approach,
+       but specific overrides for elements if needed can go here.
+       e.g., if you had very specific font sizes or paddings not covered by Tailwind's mobile breakpoints.
+    */
+    #backToTop {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+    /* Removed the empty #certificates li {} block from here, as it was causing a linter warning. */
+}
